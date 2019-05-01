@@ -1,0 +1,95 @@
+.intro{
+	display: flex;
+	justify-content: center;
+	margin: 50px 0px 90px 0px;
+}
+.bg-black{
+	height: 2vh;
+	width: 2vh;
+	background-color: black;
+}
+.bg-red{
+	height: 2vh;
+	width: 2vh;
+	background-color: red;
+}
+.btn-block{
+	display: flex;
+	margin: 0 10vw;
+}
+.btn-left,.btn-right{
+	height: 50vh;
+	width: 39.5vw;
+	border: solid black 1px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.btn-right{
+	border-color: red;
+}
+.btn-left{
+	margin-right: 1vw;
+}
+.b3bdr,.b4bdr{
+	height: 2.2rem;
+	width: 6.8rem;
+	background-color: rgba(177,177,177,0.30);
+	border-radius: 40px;
+	padding: 0.6rem;
+}
+.b3fleft,.b4fleft{
+	float: left;
+	margin-top: 0.3rem;
+	margin-left: 0.6rem;
+	font-size: 1.3rem;
+	color:white;
+}
+.b4fleft,.b4fright{
+	transition: 0.8s;
+}
+.b3ring,.b4ring{
+	position: absolute;
+	height: 1.8rem;
+	width: 2.2rem;
+	border: solid #6b1b9a91 4px;
+	border-radius:50%;
+	background-color: white;
+	transition: 0.6s;
+	z-index: 1;
+}
+.b3fright,.b4fright{
+	z-index: 0;
+	float: right;
+	margin-top: 0.3rem;	
+	font-size: 1.3rem;
+	margin-right: 0.5rem;
+	color: rgba(95,95,95,1.00);
+}
+#button3:checked ~ .container .btn-block .btn-left .b3bdr{
+	background-color: #6b1b9a91;
+} 
+#button3:checked ~ .container .btn-block .btn-left .b3bdr .b3fleft{
+	animation-name: b3move;
+	animation-duration: 0.8s;
+} 
+#button3:checked ~ .container .btn-block .btn-left .b3bdr .b3ring{
+	border: solid white 4px;
+	transform: translateX(4rem);
+} 
+@keyframes b3move{
+	from{opacity: 0.2; margin-left: 1.5rem;}
+	to{opacity: 1;margin-left: 0.7rem;}
+}
+.b4move1{
+	animation-name: b3move;
+	animation-duration: 0.8s;
+}
+@keyframes b3move2{
+	from{opacity: 0.2; margin-right: 1.3rem;}
+	to{opacity: 1;margin-right: 0.5rem;}
+}
+.b4move2{
+	animation-name: b3move2;
+	animation-duration: 0.8s;
+}
